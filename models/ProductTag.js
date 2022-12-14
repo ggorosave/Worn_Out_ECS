@@ -1,3 +1,4 @@
+// See category or product model for detailed comments
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');

@@ -4,8 +4,7 @@ const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 
-// Products belongsTo Category
-// Categories have many Products
+// creates a one to many relationship between category and products. hasMany works with belongsTo below
 Category.hasMany(Product, {
   foreignKey: 'category_id',
 })
@@ -14,16 +13,17 @@ Product.belongsTo(Category, {
   foreignKey: 'category_id',
 })
 
-// Products belongToMany Tags (through ProductTag)
+// Creates a many-to-many relationship. two belongsToMany methods needed to establish relationship
 Product.belongsToMany(Tag, {
+  // ProductTag is the table that connects the Tag table and the Product table
   through: {
     model: ProductTag,
     unique: false,
   },
 })
 
-// Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
+  // ProductTag is the table that connects the Tag table and the Product table
   through: {
     model: ProductTag,
     unique: false,
