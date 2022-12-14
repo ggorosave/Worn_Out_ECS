@@ -1,10 +1,13 @@
+// imports all functions to seed data to db
 const seedCategories = require('./category-seeds');
 const seedProducts = require('./product-seeds');
 const seedTags = require('./tag-seeds');
 const seedProductTags = require('./product-tag-seeds');
 
+// imports connection to sequelize
 const sequelize = require('../config/connection');
 
+// functions to seed all data
 const seedAll = async () => {
   await sequelize.sync({ force: true });
   console.log('\n----- DATABASE SYNCED -----\n');
@@ -23,4 +26,5 @@ const seedAll = async () => {
   process.exit(0);
 };
 
+// callback to seed all data
 seedAll();
