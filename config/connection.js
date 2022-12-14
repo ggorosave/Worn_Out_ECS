@@ -1,5 +1,7 @@
+// imports dotenv so we can use .env files for sensitive information
 require('dotenv').config();
 
+// imports sequelize
 const Sequelize = require('sequelize');
 
 const sequelize = process.env.JAWSDB_URL
@@ -10,7 +12,6 @@ const sequelize = process.env.JAWSDB_URL
       dialectOptions: {
         decimalNumbers: true,
       },
-      // need port?
     });
 
 module.exports = sequelize;
