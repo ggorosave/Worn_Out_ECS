@@ -1,5 +1,6 @@
 const { Tag } = require('../models');
 
+// tag data
 const tagData = [
   {
     tag_name: 'rock music',
@@ -27,6 +28,7 @@ const tagData = [
   },
 ];
 
+// function to seed product tag data
 const seedTags = () => Tag.bulkCreate(tagData);
 
 module.exports = seedTags;
