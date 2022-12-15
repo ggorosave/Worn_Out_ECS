@@ -6,7 +6,7 @@ Given the importance and prevalence of internet retail, businesses will need a s
 
 ### Demo Video
 
-
+https://user-images.githubusercontent.com/103039442/207753241-8cead6ef-114c-425a-ac12-a9eb0b7bdb7b.mp4
 
 - [Link to Video on Google Drive](https://www.example.com)
 
@@ -38,6 +38,7 @@ To seed your database, run the following command in GitBash or your prefered CLI
 ```
 node seeds/index.js
 ```
+Create a `.env` file with DB_NAME set to 'ecommerce_db' and DB_USER and DB_PASSWORD set to your information. You will also need [Insomnia](https://insomnia.rest/) to test the api routes.
 
 ## License
 
